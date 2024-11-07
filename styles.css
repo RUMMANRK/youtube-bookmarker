@@ -1,0 +1,44 @@
+body {
+    width: 400px;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+  }
+  
+  #addBookmark, #viewArchive {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #bookmarkList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .bookmark-item {
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+  }
+  
+  .bookmark-title {
+    font-weight: bold;
+  }
+  
+  .bookmark-details {
+    font-size: 0.9em;
+    color: #555;
+  }
+  
+  .bookmark-actions button {
+    margin-right: 5px;
+  }
+  
+  .bookmark-thumbnail {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 5px;
+    /* Remove any default border or padding */
+    border: none;
+  }
+  
