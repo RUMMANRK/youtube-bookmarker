@@ -1,44 +1,154 @@
+/* Define root variables for Light Mode */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --button-background: #e0e0e0;
+  --button-text-color: #000000;
+  --border-color: #cccccc;
+  --button-border-radius: 8px; /* Variable for button rounding */
+}
+
+/* Dark Mode variables */
+body.dark-mode {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --button-background: #2c2c2c;
+  --button-text-color: #ffffff;
+  --border-color: #333333;
+  /* You can set a different rounding amount for dark mode if desired */
+  /* --button-border-radius: 8px; */
+}
+
+/* Apply variables */
 body {
-    width: 400px;
-    font-family: Arial, sans-serif;
-    margin: 10px;
-  }
-  
-  #addBookmark, #viewArchive {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  #bookmarkList {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .bookmark-item {
-    border-bottom: 1px solid #ccc;
-    padding: 5px 0;
-  }
-  
-  .bookmark-title {
-    font-weight: bold;
-  }
-  
-  .bookmark-details {
-    font-size: 0.9em;
-    color: #555;
-  }
-  
-  .bookmark-actions button {
-    margin-right: 5px;
-  }
-  
-  .bookmark-thumbnail {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 5px;
-    /* Remove any default border or padding */
-    border: none;
-  }
-  
+  background-color: var(--background-color);
+  color: var(--text-color);
+  width: 400px;
+  font-family: Arial, sans-serif;
+  margin: 10px;
+}
+
+button {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button-border-radius);
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#addBookmark, #backButton {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styles for the button row */
+.button-row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.button-row button {
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: var(--button-border-radius);
+}
+
+/* Styles for the View Archive button */
+#viewArchive {
+  flex-grow: 1;
+  margin-right: 5px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#viewArchive svg {
+  fill: var(--text-color);
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+/* Styles for the Theme Toggle button */
+#themeToggleButton {
+  width: 40px; /* Square button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--button-border-radius);
+}
+
+#themeToggleButton svg {
+  fill: var(--text-color);
+  width: 24px;
+  height: 24px;
+}
+
+#bookmarkList, #archiveList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bookmark-item {
+  border-bottom: 1px solid var(--border-color);
+  padding: 5px 0;
+}
+
+.bookmark-title {
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.bookmark-title:hover {
+  text-decoration: underline;
+}
+
+.bookmark-details {
+  font-size: 0.9em;
+  color: var(--text-color);
+}
+
+.bookmark-actions {
+  display: flex;
+  margin-top: 5px;
+}
+
+.bookmark-actions button {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  margin-right: 5px;
+  border-radius: var(--button-border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.bookmark-actions button svg {
+  fill: var(--text-color);
+  width: 20px;
+  height: 20px;
+}
+
+.bookmark-thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 5px;
+  border: none;
+}
